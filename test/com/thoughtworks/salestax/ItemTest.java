@@ -17,4 +17,10 @@ public class ItemTest {
         Item item = new Item(1, "Music CD", 10, false);
         assertEquals(1.0, item.salesTax(), 0.0);
     }
+
+    @Test
+    public void shouldBeZeroTaxForBooks() {
+        Item item = new Item(1, "book", 10, false);
+        assertEquals(0.0, item.salesTax(), 0.0);
+    }
 }

@@ -16,6 +16,7 @@ public class Item {
     }
 
     public double salesTax() {
+        if(!name.equals("book"))
         tax = amount * 0.1;
         return tax;
     }
