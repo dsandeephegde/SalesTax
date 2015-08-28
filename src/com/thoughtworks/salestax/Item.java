@@ -18,6 +18,8 @@ public class Item {
     public double salesTax() {
         if(!(name.contains("book") || name.contains("chocolate") || name.contains("pills")))
             tax = amount * 0.1;
+        if(isImported)
+            tax = amount * 0.05;
         return tax;
     }
 }
