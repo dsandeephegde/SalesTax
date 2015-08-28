@@ -16,10 +16,15 @@ public class Item {
     }
 
     public double salesTax() {
-        if(!(name.contains("book") || name.contains("chocolate") || name.contains("pills")))
-            tax = amount * 0.1;
-        if(isImported)
-            tax = amount * 0.05;
+        double percent = 0.0;
+        if(!(name.contains("book") || name.contains("chocolate") || name.contains("pills"))) {
+            percent = 0.1;
+            tax = amount * percent;
+        }
+        if(isImported) {
+            percent += 0.05;
+            tax = amount * percent;
+        }
         return tax;
     }
 }
