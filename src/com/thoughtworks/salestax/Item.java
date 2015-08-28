@@ -7,7 +7,6 @@ public class Item {
     private String name;
     private double amount;
     private boolean isImported;
-    private double tax;
 
     public Item(int number, String name, double amount, boolean isImported) {
         this.number = number;
@@ -17,6 +16,7 @@ public class Item {
     }
 
     public double salesTax() {
+        double tax = 0.0;
         double percent = 0.0;
         if(!(name.contains("book") || name.contains("chocolate") || name.contains("pills"))) {
             percent = 0.1;
