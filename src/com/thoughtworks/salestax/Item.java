@@ -1,5 +1,6 @@
 package com.thoughtworks.salestax;
 
+//Item calculates sales tax and price inclusive of tax
 public class Item {
 
     private int number;

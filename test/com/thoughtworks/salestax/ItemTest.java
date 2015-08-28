@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+//Tests the item class for behaviour, the salesTax() and price()
 public class ItemTest {
 
     @Test
