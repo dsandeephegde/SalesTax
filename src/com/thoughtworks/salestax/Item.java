@@ -16,8 +16,8 @@ public class Item {
     }
 
     public double salesTax() {
-        if(!(name.equals("book") || name.equals("chocolate")))
-        tax = amount * 0.1;
+        if(!(name.contains("book") || name.contains("chocolate") || name.contains("pills")))
+            tax = amount * 0.1;
         return tax;
     }
 }

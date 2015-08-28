@@ -29,4 +29,10 @@ public class ItemTest {
         Item item = new Item(1, "chocolate", 10, false);
         assertEquals(0.0, item.salesTax(), 0.0);
     }
+
+    @Test
+    public void shouldBeZeroTaxForMedicines() {
+        Item item = new Item(1, "Headache pills", 10, false);
+        assertEquals(0.0, item.salesTax(), 0.0);
+    }
 }
