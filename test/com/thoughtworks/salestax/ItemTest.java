@@ -23,4 +23,10 @@ public class ItemTest {
         Item item = new Item(1, "book", 10, false);
         assertEquals(0.0, item.salesTax(), 0.0);
     }
+
+    @Test
+    public void shouldBeZeroTaxForFood() {
+        Item item = new Item(1, "chocolate", 10, false);
+        assertEquals(0.0, item.salesTax(), 0.0);
+    }
 }
