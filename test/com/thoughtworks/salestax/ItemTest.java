@@ -47,4 +47,10 @@ public class ItemTest {
         Item item = new Item(1, "Music CD", 10, true);
         assertEquals(1.5, item.salesTax(), 0.001);
     }
+
+    @Test
+    public void priceInclusiveOfTaxShouldBeCorrect() {
+        Item item = new Item(1, "Music CD", 10, true);
+        assertEquals(11.5, item.price(), 0.001);
+    }
 }

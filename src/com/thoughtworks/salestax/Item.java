@@ -27,4 +27,8 @@ public class Item {
         }
         return tax;
     }
+
+    public double price() {
+        return amount + salesTax();
+    }
 }
