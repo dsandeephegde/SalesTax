@@ -2,11 +2,21 @@ package com.thoughtworks.salestax;
 
 public class Item {
 
-    public Item(int number, String name, double amount, boolean isImported) {
+    private int number;
+    private String name;
+    private double amount;
+    private boolean isImported;
+    private double tax;
 
+    public Item(int number, String name, double amount, boolean isImported) {
+        this.number = number;
+        this.name = name;
+        this.amount = amount;
+        this.isImported = isImported;
     }
 
     public double salesTax() {
-        return 0.0;
+        tax = amount * 0.1;
+        return tax;
     }
 }
